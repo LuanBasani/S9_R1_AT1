@@ -4,19 +4,24 @@ Este projeto foi desenvolvido para o **Desafio Profissional Inicial – Mini Des
 
 ## Objetivo
 
-Criar uma página com formulário HTML que envie dados via **POST** e os exiba utilizando uma função PHP reutilizável.
+Criar um formulário HTML que envie dados utilizando o método **POST** e exiba as informações em outra página com PHP.
 
 ## Funcionalidades
 
-- Formulário com 3 campos: nome, e-mail e texto
-- Envio de dados via método POST
-- Exibição dos dados recebidos com função reutilizável
-- Proteção contra XSS com `htmlspecialchars()`
-- Código organizado e comentado
+- Formulário com:
+  - Nome
+  - E-mail
+  - Mensagem
+- Envio de dados via POST
+- Exibição dos dados enviados
+- Separação entre HTML e PHP
+- CSS separado em outro arquivo
+- Botão para voltar ao formulário
 
 ## Tecnologias utilizadas
 
-- HTML
+- HTML5
+- CSS3
 - PHP
 
 ## Como executar o projeto
@@ -38,27 +43,36 @@ http://localhost:8000
 ## Estrutura do projeto
 
 ```txt
-projeto/
+S9_R1_AT1/
+│
+├── css/
+│   └── style.css
 │
 ├── index.php
+├── processa.php
 └── README.md
 ```
 
 ## Sobre o código
 
-O arquivo `index.php` contém o formulário e o processamento PHP na mesma página.
+### index.php
+Contém o formulário HTML responsável pelo envio dos dados.
 
-- `exibirCampo($label, $valor)` — exibe um campo recebido pelo formulário de forma formatada e segura
-- `isset($_POST[...])` — verifica se o formulário foi enviado antes de exibir os dados
+### processa.php
+Recebe os dados enviados pelo formulário utilizando `$_POST` e exibe as informações na tela.
+
+### style.css
+Responsável pela estilização da página.
 
 ## Critérios atendidos
 
 - Formulário HTML funcional
 - Uso do método POST
-- Pelo menos 3 campos
-- PHP recebendo e exibindo os dados
-- Código comentado e organizado
+- Múltiplos campos no formulário
+- PHP recebendo e exibindo dados
+- Organização de arquivos
+- Separação entre HTML, CSS e PHP
 
 ## Autor
 
-Feito por **Luan Basani**.
+Feito por **Luan Basani**
